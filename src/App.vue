@@ -1,27 +1,16 @@
 <script setup>
-import ButtonDemo from "./components/ButtonDemo.vue";
-import AlertDemo from "./components/AlertDemo.vue";
-import ChangeTheme from "./components/ChangeTheme.vue";
+import { ref } from "vue";
+const theme = ref("light");
+const changeTheme = () => {
+  theme.value = theme.value === "light" ? "dark" : "light";
+};
 </script>
 
 <template>
-  <change-theme></change-theme>
-  <div class="theme-app">
-    <div class="container">
-      <button-demo></button-demo>
-    </div>
-    <div class="container">
-      <alert-demo></alert-demo>
-    </div>
+  <div id="theme-app" :data-mode="theme">
+    <button class="btn" @click="changeTheme">
+      {{ theme === "light" ? "亮色模式" : "暗黑模式" }}
+    </button>
+    <p class="title">主题切换</p>
   </div>
 </template>
-
-<style scoped>
-.container {
-  width: 650px;
-  padding: 20px 24px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin-top: 24px;
-}
-</style>
