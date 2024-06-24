@@ -3,7 +3,7 @@ body {
   text-align: center;
 }
 
-#theme-app {
+#root {
   width: 100vw;
   height: 100vh;
 }
@@ -18,21 +18,21 @@ button {
 }
 
 /* 亮色模式 */
-#theme-app[data-mode="light"] {
+#root[data-mode="light"] #theme-app {
   background: #fff;
   color: #000;
 }
-#theme-app[data-mode="light"] button {
+#root[data-mode="light"] button {
   background: #000;
   color: #fff;
 }
 
 /* 暗色模式 */
-#theme-app[data-mode="dark"] {
+#root[data-mode="dark"] {
   background: #000;
   color: #fff;
 }
-#theme-app[data-mode="dark"] button {
+#root[data-mode="dark"] button {
   background: #fff;
   color: #000;
 }
