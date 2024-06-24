@@ -1,0 +1,32 @@
+@import "./theme/index.scss";
+body {
+  margin: 0;
+  text-align: center;
+}
+
+#theme-app {
+  width: 100vw;
+  height: 100vh;
+}
+.title {
+  font-size: 40px;
+  margin: 60px auto;
+}
+button {
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#theme-app {
+  @include useTheme() {
+    background: getValue("bgColor");
+    color: getValue("fontColor");
+  }
+}
+button {
+  @include useTheme() {
+    background: getValue("btnBgColor");
+    color: getValue("btnFontColor");
+  }
+}
