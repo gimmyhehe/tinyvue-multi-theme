@@ -20,22 +20,25 @@ button {
   cursor: pointer;
 }
 
-/* 亮色模式 */
-#root[data-mode="light"] #theme-app {
-  background: #fff;
-  color: #000;
-}
-#root[data-mode="light"] button {
-  background: #000;
-  color: #fff;
+#root[data-mode="light"] {
+  --color: #000;
+  --bg-color: #fff;
+  --btn-color: #fff;
+  --btn-bg-color: #000;
 }
 
-/* 暗色模式 */
-#root[data-mode="dark"] #theme-app {
-  background: #000;
-  color: #fff;
+#root[data-mode="dark"] {
+  --color: #fff;
+  --bg-color: #000;
+  --btn-color: #000;
+  --btn-bg-color: #fff;
 }
-#root[data-mode="dark"] button {
-  background: #fff;
-  color: #000;
+
+#theme-app {
+  background: var(--bg-color);
+  color: var(--color);
+}
+button {
+  background: var(--btn-bg-color);
+  color: var(--btn-color);
 }
