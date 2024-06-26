@@ -2,12 +2,14 @@
 import { ref } from "vue";
 const theme = ref("light");
 const changeTheme = () => {
+  const link = document.getElementById("dynamic-css");
   theme.value = theme.value === "light" ? "dark" : "light";
+  link.setAttribute("href", `./${theme.value}.css`);
 };
 </script>
 
 <template>
-  <div id="root" :data-mode="theme">
+  <div id="root">
     <div id="theme-app">
       <button class="btn" @click="changeTheme">
         {{ theme === "light" ? "亮色模式" : "暗黑模式" }}

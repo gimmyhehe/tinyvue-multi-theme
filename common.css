@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+#theme-app {
+  height: 100%;
+}
+.title {
+  font-size: 40px;
+  margin: 60px auto;
+}
+button {
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
