@@ -10,7 +10,7 @@ import {
   Radio as TinyRadio,
   RadioGroup as TinyRadioGroup,
 } from "@opentiny/vue";
-import TinyThemeTool from "@opentiny/vue-theme/theme-tool";
+import TinyThemeTool from "../theme-tool";
 import { ref } from "vue";
 
 const emit = defineEmits(["change-theme"]);
@@ -21,8 +21,6 @@ const themeTool = new TinyThemeTool();
 
 const tinyTestTheme = {
   id: "tiny-test-theme",
-  name: "testTheme",
-  cnName: "测试主题",
   data: {
     // 设置公共变量
     "ti-common-color-primary-bg": "#409eff",
