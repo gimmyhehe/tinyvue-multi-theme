@@ -41,7 +41,6 @@ const tinyTestTheme = {
     "ti-alert-border-radius": "6px",
     "ti-alert-close-font-size": "14px",
     "ti-alert-description-font-size": "14px",
-    // "ti-alert-title-text-color": "#eee",
     "ti-alert-success-close-icon-color": "#a8abb2",
     "ti-alert-info-close-icon-color": "#a8abb2",
     "ti-alert-error-close-icon-color": "#a8abb2",

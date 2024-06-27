@@ -6,14 +6,16 @@ import ChangeTheme from "./components/ChangeTheme.vue";
 
 <template>
   <change-theme></change-theme>
-  <div class="theme-app">
-    <div class="container">
-      <button-demo></button-demo>
+  <config-provier>
+    <div class="theme-app">
+      <div class="container">
+        <button-demo></button-demo>
+      </div>
+      <div class="container">
+        <alert-demo></alert-demo>
+      </div>
     </div>
-    <div class="container">
-      <alert-demo></alert-demo>
-    </div>
-  </div>
+  </config-provier>
 </template>
 
 <style scoped>

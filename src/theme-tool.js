@@ -18,10 +18,10 @@ const formatContent = (theme) => {
     ${rootVars.map(([key, value]) => `--${key}: ${value}`).join(";\n")}
   }` +
     `
-      .tiny-button.tiny-button {
+      .tiny-button[class*=tiny] {
     ${buttonVars.map(([key, value]) => `--${key}: ${value}`).join(";\n")}
       }
-      .tiny-alert.tiny-alert {
+      .tiny-alert[class*=tiny] {
     ${alertVars.map(([key, value]) => `--${key}: ${value}`).join(";\n")}
       }
   `
